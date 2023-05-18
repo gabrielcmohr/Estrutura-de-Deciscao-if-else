@@ -5,11 +5,17 @@
     Em seguida, troque o valor das variáveis, invertendo e exibindo o antes e o depois em uma janela de alert.
     */
 
-    //ENTRADA
+    let num1 = parseInt(prompt("Informe um número intero."));
+    let num2 = parseInt(prompt("Informe outro número intero."));
+    const num3 = num1
+    num1 = num2
+    num2 = num3
+    if (isNaN(num1) || isNaN(num2)) {
+        alert("Um ou mais valores não são números.")
+    }
+    else {
+        //alert(`${num1} ${num2} \n ${num3} ${num1}`)
+        alert(num1 + num2 + "\n" + num3 + num1)
+    }
 
-    //PROCESSAMENTO
-
-    //SAÍDA
-
-    
 </script>

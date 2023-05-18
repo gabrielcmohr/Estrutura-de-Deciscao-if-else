@@ -4,11 +4,17 @@
     Faça um script que leia três números e mostre-os em ordem decrescente.
     */
 
-    //ENTRADA
+    const num1 = Number(prompt("Infome um número."))
+    const num2 = Number(prompt("Infome outro número."))
+    const num3 = Number(prompt("Infome mais um número."))
+    if (isNaN(num1) || isNaN(num2) || isNaN(num3)) {
+        alert("informe apenas números.")
+    }
+    else {
+        const maior = Math.max(num1, num2, num3)
+        const menor = Math.min(num1, num2, num3)
+        const meio = (num1 + num2 + num3) - (maior + menor)
+        alert("A ordem decrescente é " + maior + meio + menor)
+    }
 
-    
-    //PROCESSAMENTO
-    
-    //SAÍDA
-    
 </script>
