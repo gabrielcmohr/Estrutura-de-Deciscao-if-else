@@ -4,13 +4,24 @@
     Faça um script que peça um número inteiro e determine se ele é par ou ímpar.
     */
 
-    //ENTRADA
+    const num = Number(prompt("Informe um número:"))
 
-    
-    //PROCESSAMENTO
-    
-    
-    //SAÍDA
-    
-    
+    if (isNaN(num)) {
+        alert("Incorreto, informe apenas números. Ex: 5")
+    }
+
+    else {
+        if (num % 2 === 0) {
+            alert("Número é par")
+        }
+        else if (num % 2 != 0) {
+            alert("Número é impar")
+
+        }
+        else {
+
+        }
+    }
+
+
 </script>
