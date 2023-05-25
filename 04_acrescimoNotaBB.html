@@ -7,18 +7,16 @@
     const notaDepois = Number(prompt("qual a nota atual do little brother?"))
     const notaBB = Number(prompt("Qual a nota do big brother?"))
 
-    if(notaAntes < notaDepois) {
+    if (notaAntes < notaDepois) {
         const notaBBAcrescimo = notaBB + (notaDepois - notaAntes) / 4
         document.write("A nota do little brother foi maior. A nota do big brother foi para " + notaBBAcrescimo)
 
     }
-    else if(notaDepois < notaAntes) {
+    else if (notaDepois < notaAntes) {
         document.write("A nota do little brother foi menor")
     }
     else {
         document.write("A nota não mudou.")
     }
-
-    
 
 </script>
