@@ -10,7 +10,7 @@
     Testar com: 326, 300, 100, 320, 310,305, 301, 101, 311, 111, 25, 20, 10, 21, 11, 1, 7 e 16
     */
 
-    const num = prompt("Informe um número menor que 1000:")
+    const num = Number(Math.round(prompt("Informe um número menor que 1000:")))
 
     if (num < 10) {
         let numUni = num % 10;
