@@ -17,20 +17,39 @@
     let mensagem = "";
 
     if (num < 10) {
-        mensagem = numUni + "Unidade";
-        if (numUni > 1) { mensagem += "s"; }
+        mensagem = numUni + " Unidade";
+        if (numUni > 1) {
+            mensagem += "s ";
+        }
         alert(mensagem);
     }
     else if (num < 100) {
-        mensagem = numDeze + "Dezena";
-        if (numDeze > 1) { mensagem += "s"; }
+        mensagem = numDeze + " Dezena";
+        if (numDeze > 1) {
+            mensagem += "s ";
+        }
+        else {
+            mensagem += " "
+        }
         if (numUni > 0) {
-            mensagem += "e" + numUni + "Unidade";
-            if (numUni > 1) { mensagem += "s"; }
+            mensagem += "e " + numUni + " Unidade";
+            if (numUni > 1) { mensagem += "s "; }
         }
         alert(mensagem);
     }
     else if (num < 1000) {
+        mensagem = numCen + " Centena";
+        if (numCen > 1) {
+            mensagem += "s ";
+        }
+        if (numDeze > 0) {
+            mensagem += ", " + numDeze + " Dezena";
+            if (numDeze > 1) { mensagem += "s "; }
+        }
+        if (numUni > 0) {
+            mensagem += "e " + numUni + " Unidade";
+            if (numUni > 1) { mensagem += "s "; }
+        }
         
         alert(mensagem)
     }
