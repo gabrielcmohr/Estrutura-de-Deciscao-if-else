@@ -12,23 +12,61 @@
 
     const num = Number(Math.round(prompt("Informe um número menor que 1000:")))
 
-    if (num < 10) {
-        let numUni = num % 10;
-        alert("Unidade " + numUni);
+    function unidade(num) {
+        return num % 10
+    }
+    function dezena(num) {
+        return Math.floor((num % 100) / 10)
+    }
+    function centena(num) {
+        return Math.floor(num / 100)
+    }
+    let mensagem = ""
 
+    if (num < 10) {
+        let numUni = unidade(num);
+        mensagem = numUni + " Unidade";
+        if (numUni > 1) {
+            mensagem += "s "
+        }
+        alert(mensagem)
     }
     else if (num < 100) {
-        let numUni = num % 10;
-        let numDeze = Math.floor(num / 10);
-        alert("Dezena " + numDeze + ", Unidade " + numUni);
+        let numDeze = dezena(num);
+        mensagem = numDeze + " Dezena"
+        if (numDeze > 1) {
+            mensagem += "s "
+        }
+        let numUni = unidade(num);
+        if (numUni > 0) {
+            mensagem += "e " + numUni + " Unidade"
+            if (numUni > 1) {
+            mensagem += "s "
+        }
+        }
+        alert(mensagem);
     }
     else if (num < 1000) {
-        let numUni = num % 10;
-        let numDeze = Math.floor((num % 100) / 10);
-        let numCen = Math.floor(num / 100);
-
-        alert("Centena" + numCen + "Dezena " + numDeze + ", Unidade " + numUni)
-
+        let numCen = centena(num);
+        mensagem = numCen + " Centena"
+        if (numCen > 1) {
+            mensagem += "s "
+        }
+        let numDeze = dezena(num);
+        if (numDeze > 0) {
+            mensagem += ", " + numDeze + " Dezena"
+        }
+        if (numDeze > 1) {
+            mensagem += "s "
+        }
+        let numUni = unidade(num);
+        if (numUni > 0) {
+            mensagem += "e " + numUni + " Unidade"
+            if (numUni > 1) {
+            mensagem += "s "
+        }
+        }
+        alert(mensagem)
     }
     else {
         alert("Valor maior que 1000, informe um número menor.")
