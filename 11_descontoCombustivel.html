@@ -13,13 +13,33 @@
     Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível (codificado da seguinte forma: A-álcool, G-gasolina), calcule e imprima o valor a ser pago pelo cliente sabendo-se que o preço do litro da gasolina é R$ 6,50 o preço do litro do álcool é R$ 6,10.
     */
 
-    //ENTRADA
+    const combustivel = Number(prompt("Quantos litros de combústivel?"));
 
+    if (isNaN(combustivel)) {
+        alert("Invalido, use apenas números.");
+    } else {
+        let tipo = prompt("Qual o tipo de combústivel? \n A-álcool, G-gasolina").toLowerCase();
 
-    //PROCESSAMENTO
+        if (tipo === "g" || tipo === "a") {
+            let preco;
 
-    
-    //SAÍDA
-
-
+            if (tipo === "a") {
+                if (combustivel > 20) {
+                    preco = (combustivel * 6.10) * 0.95;
+                } else {
+                    preco = (combustivel * 6.10) * 0.97;
+                }
+            }
+            else if (tipo === "g") {
+                if (combustivel > 20) {
+                    preco = (combustivel * 6.50) * 0.94;
+                } else {
+                    preco = (combustivel * 6.50) * 0.96;
+                }
+            }
+            alert("O preço a ser pago é: R$" + preco.toFixed(2).replace(".", ","));
+        } else {
+            alert("invalido, use apenas G ou A.");
+        }
+    }
 </script>
