@@ -5,13 +5,38 @@
     De acordo com as respostas, informe qual a estação do ano correspondente.
     */
 
-    //ENTRADA
+    const hemisferio = prompt(`Em qual hemisfério você está? (N para Norte, S para Sul)`).toLowerCase().trim();
+    const mes = Number(prompt(`Em qual mês você está? (1 para Janeiro, 2 para Fevereiro, 3 para Março...)`));
 
+    if (hemisferio == "n") {
 
-    //PROCESSAMENTO
+        if (mes == 1 || mes == 2 || mes == 3) {
+            alert(`Você está no Inverno`)
+        }
+        else if (mes == 4 || mes == 5 || mes == 6) {
+            alert("Você está na Primavera")
+        }
+        else if (mes == 7 || mes == 8 || mes == 9) {
+            alert("Você está no Verão")
+        }
+        else if (mes == 10 || mes == 11 || mes == 12) {
+            alert("Você está no Outono")
+        }
+    } 
+    else if (hemisferio == "s") {
 
-    
-    //SAÍDA
-
+if (mes == 7 || mes == 8 || mes == 9) {
+    alert(`Você está no Inverno`)
+}
+else if (mes == 10 || mes == 11 || mes == 12) {
+    alert("Você está na Primavera")
+}
+else if (mes == 1 || mes == 2 || mes == 3) {
+    alert("Você está no Verão")
+}
+else if (mes == 4 || mes == 5 || mes == 6) {
+    alert("Você está no Outono")
+}
+} 
 
 </script>

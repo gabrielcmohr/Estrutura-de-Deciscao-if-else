@@ -6,12 +6,24 @@
         //- até 1500(inclusive): aumento de 10 %
         //- acima de 1500: aumento de 5 %
     
-    // Entrada
+    const produto = Number(prompt(`Insira o preço do produto`));
 
-    
-    // Processamento
-
-    
-    // Saída
+    if( produto >0 && produto <=280) {
+        produto1 = produto * 20 / 100
+        alert("O aumento do produto foi de R$" + produto1);
+    }
+    else if (produto > 280 && produto<= 700 ){
+        produto2 = produto * 15 / 100
+        alert("O aumento do produto foi de R$" + produto2);
+    }
+    else if(produto >700 && produto <=1500) {
+        produto3 = produto * 10 / 100
+        alert("O aumento do produto foi de R$" + produto3);
+    }
+    else if(produto > 1500) 
+    {
+        produto4 = produto * 5 / 100
+        alert("O aumento do produto foi de R$" + produto4);
+    }
 
 </script>
