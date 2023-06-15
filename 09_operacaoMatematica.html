@@ -7,13 +7,59 @@
     - inteiro ou decimal.
     */
 
-    //ENTRADA
+    const num1 = Number(prompt("Informe o primeiro número:"));
+    const num2 = Number(prompt("Informe o segundo número:"));
+    const op = prompt("Informe uma operação que deseja realizar: \n soma: ( + ), subtração: ( - ) \n multiplicação: ( * ), divisão: ( / )")
+    let mensagem = ""
+
+    if (isNaN(num1) || isNaN(num2)) {
+        alert("informe apenas números.")
+    }
+    else {
+        if (op == "+") {
+            conta = num1 + num2
+        }
+        else if (op == "-") {
+            conta = num1 - num2
+        }
+        else if (op == "*") {
+            conta = num1 * num2
+        }
+        else if (op == "/") {
+            conta = num1 / num2
+        }
+        else {
+            alert("Informe apenas: \n soma: ( + ), subtração: ( - ) \n multiplicação: ( * ), divisão: ( / )")
+        }
+        mensagem += conta
+        //par/ impar
+        if (conta % 2 === 0) {
+            mensagem += " é par, "
+        }
+        else {
+            mensagem += " é impar, "
+        }
+        //negativo/positivo
+        if (Math.sign(conta) == 1) {
+            mensagem += "positivo "
+
+        }
+        else if (Math.sign(conta) == -1) {
+            mensagem += "negativo "
+        }
+        else if (Math.sign(conta) == 0 || Math.sign(conta) == -0) {
+            mensagem += ""
+        }
+        if(conta - Math.round(conta) == 0) {
+            mensagem += "e inteiro"
+        }
+        else {
+            mensagem += "e Decimal"
+        }
+        alert(mensagem)
+    }
 
 
-    //PROCESSAMENTO
-
-    
-    //SAÍDA
 
 
 </script>

@@ -5,13 +5,21 @@
     Dica: utilize uma função de arredondamento.
     */
 
-    //ENTRADA
+    let num = Number(prompt("informe um número:"))
 
+    result = num - Math.round(num)
 
-    //PROCESSAMENTO
-
-    
-    //SAÍDA
+    if (isNaN(num)) {
+        alert("Informe apenas números")
+    }
+    else {
+        if (result == 0) {
+            alert("É um número inteiro")
+        }
+        else {
+            alert("Não é um número inteiro")
+        }
+    }
 
 
 </script>
