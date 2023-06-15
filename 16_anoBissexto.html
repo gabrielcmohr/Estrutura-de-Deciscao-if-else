@@ -2,10 +2,16 @@
 <script>
     // Recebe um ano e informa se ele é bissexto ou não.
 
-    // Entrada
-    
-    // Processamento
+    const ano = prompt("Informe um ano para saber se é bissexto:")
 
-    // Saída
+    if (isNaN(ano)) {
+        alert("Informe apenas números");
+    } else {
+        if ((ano % 400 == 0) || (ano % 4 == 0 && ano % 100 != 0)) {
+            alert("É bissexto");
+        } else {
+            alert("Não é bissexto");
+        }
+    }
 
 </script>
