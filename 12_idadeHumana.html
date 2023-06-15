@@ -6,12 +6,26 @@
     // - cães de porte médio: fator 6
     // - cães grandes: fator 7.
 
-    // Entrada
+    const iCao = Number(prompt("Qual a idade do seu cão?"));
 
-    
-    // Processamento
+    if (isNaN(iCao)) {
+        alert("Informe apenas números.");
+    } else {
+        let pCao = prompt("Qual o porte do seu cão? \n porte pequeno: P \n porte médio: M \n porte grande: G").toLowerCase();
 
-    
-    // Saída
+        if (pCao === "p" || pCao === "m" || pCao === "g") {
+            let idade;
 
+            if (pCao === "p") {
+                idade = iCao * 5;
+            } else if (pCao === "m") {
+                idade = iCao * 6;
+            } else {
+                idade = iCao * 7;
+            }
+            alert("A idade do cão é de: " + idade)
+        } else {
+            alert("Invalido, Informe apenas P, M ou G")
+        }
+    }
 </script>
