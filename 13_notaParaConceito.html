@@ -8,12 +8,28 @@
     // Entre 6.9 e 6.0             D
     // Entre 5.9 e zero            E
 
-    // Entrada
+    const nota = Number(prompt("Informe uma nota para ser convertida em conceito:"));
 
+    if (nota > 10) {
+        alert("Informe apenas números de 0 á 10")
+    }
+    else if (nota >= 9 || nota === 10) {
+        alert("Sua nota foi convertida para A")
+    }
+    else if (nota >= 8 || nota === 8.9) {
+        alert("Sua nota foi convertida para B")
+    }
+    else if (nota >= 7 || nota === 7.9) {
+        alert("Sua nota foi convertida para C")
+    }
+    else if (nota >= 6 || nota === 6.9) {
+        alert("Sua nota foi convertida para D")
+    }
+    else if (nota >= 0 || nota === 5.9) {
+        alert("Sua nota foi convertida para E")
+    }
+    else {
+        alert("Informe apenas números de 0 á 10")
+    }
     
-    // Processamento
-
-    
-    // Saída
-
 </script>
